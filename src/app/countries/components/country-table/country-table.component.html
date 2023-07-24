@@ -37,8 +37,8 @@
                     {{country.population | number}}
                 </td>
                 <td>
-                    <button class="btn btn-primary">
-                        <a href="#" class="text-white">Ver más</a>
+                    <button type="button" class="btn btn-primary">
+                        <a [routerLink]="['/countries/by', country.cca3]" class="text-white">Ver más</a>
                     </button>
                 </td>
             </tr>
