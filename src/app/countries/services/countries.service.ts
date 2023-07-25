@@ -14,8 +14,7 @@ export class CountriesService {
     private getCountriesRequest(url: string): Observable<Country[]> {
         return this.http.get<Country[]>(url)
             .pipe(
-                catchError(() => of([])),
-                delay(1500)
+                catchError(() => of([]))
             )
     } 
 
@@ -28,7 +27,6 @@ export class CountriesService {
                 catchError(() => of(null))
             )
     }
-
 
     searchCapital(term: string): Observable<Country[]> {
         const url = `${this.apiUrl}/capital/${term}`
